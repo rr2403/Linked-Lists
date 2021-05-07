@@ -1,0 +1,16 @@
+//usinf fast and slow pointers
+
+int getMiddle(Node *head)
+{
+   struct Node *mid=head;
+   struct Node *temp=head;
+   
+   while(mid && mid->next){
+       if(head==NULL)
+         return -1;
+         
+        mid=mid->next->next;
+        temp=temp->next;
+   }
+   return temp->data;
+}
